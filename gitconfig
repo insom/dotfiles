@@ -3,3 +3,12 @@
     name = Aaron Brady
 [push]
     default = matching
+[format]
+    pretty = short
+[log]
+    decorate = on
+    graph = on
+[color]
+    ui = on
+[alias]
+    lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
