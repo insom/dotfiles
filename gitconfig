@@ -3,3 +3,9 @@
     name = Aaron Brady
 [push]
     default = matching
+[filter "lfs"]
+    clean = git-lfs clean %f
+    smudge = git-lfs smudge %f
+    required = true
+[diff]
+    algorithm = patience
