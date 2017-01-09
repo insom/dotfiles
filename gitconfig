@@ -2,7 +2,7 @@
     email = aaron@insom.me.uk
     name = Aaron Brady
 [push]
-    default = matching
+    default = simple
 [filter "lfs"]
     clean = git-lfs clean %f
     smudge = git-lfs smudge %f
