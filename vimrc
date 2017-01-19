@@ -18,6 +18,7 @@ autocmd BufNewFile,BufReadPost *.yml setl shiftwidth=2 ts=2 expandtab
 autocmd BufNewFile,BufReadPost *.rb  setl shiftwidth=2 ts=2 expandtab
 autocmd BufNewFile,BufReadPost *.erb setl shiftwidth=2 ts=2 expandtab
 autocmd BufNewFile,BufReadPost *.md  set filetype=markdown
+autocmd FileType ruby setl iskeyword+=?,!
 
 set bg=dark
 if has("gui_running")
