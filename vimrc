@@ -35,3 +35,5 @@ set showtabline=1
 
 set grepprg=rg\ --vimgrep\ --no-heading " Use ripgrep instead of grep
 set grepformat=%f:%l:%c:%m,%f:%l:%m     " Set grepformat
+nnoremap - "
+nnoremap -- :reg<CR>
