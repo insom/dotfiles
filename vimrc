@@ -1,3 +1,4 @@
+
 set ts=4
 set sw=4
 set expandtab
@@ -9,6 +10,8 @@ set directory=/tmp
 set t_Co=256
 set guifont=Sudo:h18
 set lbr
+
+let mapleader=" "
 
 set rtp+=/usr/local/opt/fzf
 
@@ -35,5 +38,10 @@ set showtabline=1
 
 set grepprg=rg\ --vimgrep\ --no-heading " Use ripgrep instead of grep
 set grepformat=%f:%l:%c:%m,%f:%l:%m     " Set grepformat
-" nnoremap - "
-" nnoremap -- :reg<CR>
+
+nnoremap <leader>j :Buffers<cr>
+nnoremap <leader><C-p> :Files<cr>
+nnoremap <leader><C-s> :GFiles?<cr>
+nnoremap <C-p> :GFiles<cr>
+nnoremap <leader>t :Tags<cr>
+nnoremap <leader>T :BTags<cr>
