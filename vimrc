@@ -15,6 +15,9 @@ let mapleader=" "
 
 set rtp+=/usr/local/opt/fzf
 
+let g:tmux_navigator_no_mappings = 1
+
+
 execute pathogen#infect()
 
 autocmd BufNewFile,BufReadPost *.yml setl shiftwidth=2 ts=2 expandtab
@@ -45,3 +48,18 @@ nnoremap <leader><C-s> :GFiles?<cr>
 nnoremap <C-p> :GFiles<cr>
 nnoremap <leader>t :Tags<cr>
 nnoremap <leader>T :BTags<cr>
+
+augroup trim
+    fun! Trim()
+        let l:save = winsaveview()
+        %s/\s\+$//e
+        call winrestview(l:save)
+    endfun
+    command! Trim call Trim()
+    autocmd BufWritePre * :call Trim()
+augroup END
+
+nnoremap <silent> <S-Left> :TmuxNavigateLeft<cr>
+nnoremap <silent> <S-Down> :TmuxNavigateDown<cr>
+nnoremap <silent> <S-Up> :TmuxNavigateUp<cr>
+nnoremap <silent> <S-Right> :TmuxNavigateRight<cr>
