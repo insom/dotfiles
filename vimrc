@@ -10,6 +10,7 @@ set directory=/tmp
 set t_Co=256
 set guifont=Sudo:h18
 set lbr
+set virtualedit=all
 
 let mapleader=" "
 
