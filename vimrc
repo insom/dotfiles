@@ -10,20 +10,13 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'kien/ctrlp.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'franbach/miramare'
-Plug 'neomake/neomake'
-Plug 'unblevable/quick-scope'
 Plug 'tpope/vim-eunuch'
-Plug 'tpope/vim-flagship'
 Plug 'tpope/vim-fugitive'
 Plug 'fatih/vim-go'
-Plug 'michaeljsmith/vim-indent-object'
-Plug 'ngmy/vim-rubocop'
 Plug 'tpope/vim-surround'
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'benmills/vimux'
 Plug 'tpope/vim-vinegar'
 Plug 'https://tildegit.org/sloum/gemini-vim-syntax'
 
@@ -79,3 +72,4 @@ nnoremap <silent> <S-Up> :TmuxNavigateUp<cr>
 nnoremap <silent> <S-Right> :TmuxNavigateRight<cr>
 
 set mouse=a
+set nu
