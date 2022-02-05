@@ -1,0 +1,5 @@
+borderwidth 5
+color activeborder slate
+unbind-mouse 1
+bind-mouse M-3 window-raise
+bind-mouse 1 window-raise

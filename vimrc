@@ -10,6 +10,8 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'junegunn/goyo.vim'
+Plug 'junegunn/limelight.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'franbach/miramare'
 Plug 'tpope/vim-eunuch'
@@ -77,3 +79,7 @@ nnoremap <silent> <S-Right> :TmuxNavigateRight<cr>
 
 set mouse=a
 set nu
+
+set modeline
+
+" set notgc
