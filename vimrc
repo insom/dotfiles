@@ -47,6 +47,7 @@ set guifont=Sudo:h18
 set lbr
 let mapleader=" "
 let g:tmux_navigator_no_mappings = 1
+let loaded_matchparen = 1
 
 autocmd BufNewFile,BufReadPost *.yml setl shiftwidth=2 ts=2 expandtab
 autocmd BufNewFile,BufReadPost *.rb  setl shiftwidth=2 ts=2 expandtab
