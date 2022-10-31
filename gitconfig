@@ -3,12 +3,11 @@
     name = Aaron Brady
 [push]
     default = simple
+    autoSetupRemote = true
 [filter "lfs"]
     clean = git-lfs clean %f
     smudge = git-lfs smudge %f
     required = true
-[diff]
-    algorithm = patience
 [format]
     pretty = short
 [log]
@@ -18,3 +17,6 @@
     ui = on
 [alias]
     lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+    please = push --force-with-lease
+[include]
+    path = /Users/aaron/.config/dev/gitconfig
