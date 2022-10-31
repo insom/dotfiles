@@ -13,10 +13,11 @@ Plug 'junegunn/fzf.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 Plug 'itchyny/lightline.vim'
-Plug 'franbach/miramare'
+"Plug 'franbach/miramare'
+Plug 'gruvbox-community/gruvbox'
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-fugitive'
-Plug 'fatih/vim-go'
+"Plug 'fatih/vim-go'
 Plug 'tpope/vim-surround'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'tpope/vim-vinegar'
@@ -56,7 +57,7 @@ autocmd BufNewFile,BufReadPost *.md  set filetype=markdown
 autocmd FileType ruby setl iskeyword+=?,!
 
 set bg=dark
-colorscheme miramare
+colorscheme gruvbox
 highlight LineNr guifg=#dddddd ctermfg=DarkGray
 set isk+=-
 syn on
