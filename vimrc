@@ -11,9 +11,6 @@ call plug#begin('~/.vim/plugged')
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/goyo.vim'
-Plug 'junegunn/limelight.vim'
-Plug 'itchyny/lightline.vim'
-"Plug 'franbach/miramare'
 Plug 'gruvbox-community/gruvbox'
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-fugitive'
@@ -21,7 +18,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'tpope/vim-vinegar'
-Plug 'https://tildegit.org/sloum/gemini-vim-syntax'
 
 call plug#end()
 
@@ -85,3 +81,7 @@ set nu
 set modeline
 
 " set notgc
+
+" Look better in cool-retro-term
+hi EndOfBuffer ctermbg=none
+hi Normal ctermbg=none
