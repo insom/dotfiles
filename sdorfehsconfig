@@ -1,0 +1,27 @@
+definekey top s-F1 vselect 0
+definekey top s-F2 vselect 1
+definekey top s-F3 vselect 2
+definekey top s-F4 vselect 3
+definekey top s-F5 vselect 4
+escape s-a
+
+set barsticky 1
+set border 6
+set onlyborder 1
+set padding 8 8 8 8
+set gap 4
+
+definekey top s-Left focusleft
+definekey top s-Up focusup
+definekey top s-Down focusdown
+definekey top s-Right focusright
+
+definekey top s-c exec gnome-terminal
+
+definekey top s-s split
+definekey top s-S hsplit
+definekey top s-colon colon
+definekey top s-exclam exec
+definekey top s-d exec
+definekey top s-r resize
+definekey top s-R remove
