@@ -65,6 +65,7 @@ set grepformat=%f:%l:%c:%m,%f:%l:%m     " Set grepformat
 
 nnoremap <leader>j :Buffers<cr>
 nnoremap <leader><C-p> :Files<cr>
+nnoremap <leader>f :Files<cr>
 nnoremap <leader><C-s> :GFiles?<cr>
 nnoremap <C-p> :GFiles<cr>
 nnoremap <leader>t :Tags<cr>
