@@ -5,6 +5,8 @@ bind-mouse M-1 window-move
 bind-mouse 4-1 window-move
 unbind-key M-Right
 unbind-key M-Left
+unbind-key M-Down
+unbind-key M-Up
 
 ignore xclock
 

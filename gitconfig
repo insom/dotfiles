@@ -20,3 +20,5 @@
     please = push --force-with-lease
 [include]
     path = /Users/aaron/.config/dev/gitconfig
+[init]
+	defaultBranch = main
