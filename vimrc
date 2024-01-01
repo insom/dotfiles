@@ -1,5 +1,4 @@
 " Auto-install vim-plug
-
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -14,7 +13,8 @@ Plug 'junegunn/goyo.vim'
 Plug 'gruvbox-community/gruvbox'
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-fugitive'
-"Plug 'fatih/vim-go'
+Plug 'fatih/vim-go'
+Plug 'vimwiki/vimwiki'
 Plug 'tpope/vim-surround'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'tpope/vim-vinegar'
@@ -47,6 +47,8 @@ set guifont=Sudo:h18
 set lbr
 let mapleader=" "
 let g:tmux_navigator_no_mappings = 1
+let g:vimwiki_list = [{'path': '~/vimwiki/', 'syntax': 'markdown', 'ext': 'md'}]
+let g:vimwiki_global_ext = 0
 let loaded_matchparen = 1
 
 autocmd BufNewFile,BufReadPost *.yml setl shiftwidth=2 ts=2 expandtab
@@ -73,6 +75,7 @@ nnoremap <leader><C-s> :GFiles?<cr>
 nnoremap <C-p> :GFiles<cr>
 nnoremap <leader>t :Tags<cr>
 nnoremap <leader>T :BTags<cr>
+nnoremap <leader>wj :VimwikiMakeDiaryNote<cr>
 
 nnoremap <silent> <S-Left> :TmuxNavigateLeft<cr>
 nnoremap <silent> <S-Down> :TmuxNavigateDown<cr>
