@@ -24,6 +24,10 @@ let g:rainbow_active = 1
 
 call plug#end()
 
+let g:go_def_mode='gopls'
+let g:go_info_mode='gopls'
+let g:go_auto_type_info = 1
+
 "if exists('+termguicolors')
 "  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 "  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
@@ -32,7 +36,6 @@ call plug#end()
 
 " disable Background Color Erase (BCE)
 set t_ut=
-
 
 set ts=4
 set sw=4
@@ -55,6 +58,7 @@ autocmd BufNewFile,BufReadPost *.yml setl shiftwidth=2 ts=2 expandtab
 autocmd BufNewFile,BufReadPost *.rb  setl shiftwidth=2 ts=2 expandtab
 autocmd BufNewFile,BufReadPost *.erb setl shiftwidth=2 ts=2 expandtab
 autocmd BufNewFile,BufReadPost *.md  set filetype=markdown
+autocmd BufNewFile,BufReadPost *.html set sw=2 ts=2 expandtab indentexpr=
 autocmd FileType ruby setl iskeyword+=?,!
 
 set bg=dark
