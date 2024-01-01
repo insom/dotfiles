@@ -18,3 +18,7 @@ xterm*color14:     rgb:71/be/be
 xterm*color15:    rgb:ff/ff/ff
 
 xterm*cursorColor: #d6d6d6
+xterm*allowBoldFonts: false
+xterm*font: -kakwa-kakwafont-medium-r-normal--12-120-72-72-c-60-iso8859-1
+xterm*renderFont: false
+xterm*loginShell: true
