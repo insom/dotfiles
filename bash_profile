@@ -34,4 +34,4 @@ fi
 
 function title() { echo -ne "\033]0; $1\007"; }
 export PATH=~/Bin:~/.local/bin:$PATH
-function ssh() { TERM=xterm /usr/bin/ssh $*; };
+function ssh() { TERM=xterm-256color /usr/bin/ssh $*; };
