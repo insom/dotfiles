@@ -35,3 +35,6 @@ fi
 function title() { echo -ne "\033]0; $1\007"; }
 export PATH=~/Bin:~/.local/bin:$PATH
 function ssh() { TERM=xterm-256color /usr/bin/ssh $*; };
+# when you don't care about the message, you just want it committed
+function gc() { git commit -m $(date +%s); };
+if [ -f .cargo/env ]; then source .cargo/env; fi

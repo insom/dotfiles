@@ -1,5 +1,5 @@
 borderwidth 5
-color activeborder slate
+color activeborder orange
 bind-mouse M-3 window-raise
 bind-mouse M-1 window-move
 bind-mouse 4-1 window-move
