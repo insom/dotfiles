@@ -1,5 +1,7 @@
 borderwidth 5
-color activeborder orange
+gap 5 35 5 5
+color inactiveborder "#eee8d5"
+color activeborder "#93a1a1"
 bind-mouse M-3 window-raise
 bind-mouse M-1 window-move
 bind-mouse 4-1 window-move

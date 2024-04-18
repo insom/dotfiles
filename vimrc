@@ -61,7 +61,6 @@ autocmd BufNewFile,BufReadPost *.md  set filetype=markdown
 autocmd BufNewFile,BufReadPost *.html set sw=2 ts=2 expandtab indentexpr=
 autocmd FileType ruby setl iskeyword+=?,!
 
-set bg=dark
 colorscheme gruvbox
 highlight LineNr guifg=#dddddd ctermfg=DarkGray
 set isk+=-
@@ -96,3 +95,4 @@ set modeline
 " Look better in cool-retro-term
 hi EndOfBuffer ctermbg=none
 hi Normal ctermbg=none
+set bg=dark
