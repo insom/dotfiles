@@ -3,12 +3,24 @@ gap 5 35 5 5
 color inactiveborder "#eee8d5"
 color activeborder "#93a1a1"
 bind-mouse M-3 window-raise
+bind-mouse 4-3 window-resize
+bind-mouse 4-2 window-resize
 bind-mouse M-1 window-move
 bind-mouse 4-1 window-move
 unbind-key M-Right
 unbind-key M-Left
 # unbind-key M-Down
 # unbind-key M-Up
+bind-key 4-v window-vtile
+bind-key 4-h window-htile
+bind-key 4-l lock
+
+sticky yes
+snapdist 10
+
+autogroup 1 kitty,kitty
+autogroup 4 code,Code
+
 
 ignore xclock
 
