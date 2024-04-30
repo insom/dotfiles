@@ -30,11 +30,14 @@ MoveDelta 3
 
 Button1 = : root : f.menu "main"
 Button2 = : root : f.menu "windowops"
-Button2 = m : window|icon : f.iconify
+Button1 = m : window|icon|title : f.move
 Button2 = : title : f.raiselower
+Button3 = : title : f.raiselower
 Button2 = : icon : f.iconify
 Button1 = : iconmgr : f.iconify
 Button2 = : iconmgr : f.iconify
+"Tab"   = m : all : f.circleup
+"Tab"   = m | s : all : f.circledown
 
 menu "main"
 {
