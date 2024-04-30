@@ -19,7 +19,7 @@ xterm*color15: #ebdbb2
 
 xterm*cursorColor: #d6d6d6
 xterm*allowBoldFonts: false
-!xterm*font: -*-terminus-medium-*-*-*-12-*-*-*-*-*-*-*
-xterm*font: mtx
+xterm*font: -*-terminus-medium-*-*-*-12-*-*-*-*-*-*-*
+!xterm*font: mtx
 xterm*renderFont: false
 xterm*loginShell: true

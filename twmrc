@@ -1,4 +1,10 @@
 NoGrabServer
+NoBackingStore
+RandomPlacement
+FramePadding 5
+BorderWidth 3
+NoHighlight
+IconifyByUnmapping
 RestartPreviousState
 DecorateTransients
 TitleFont "fixed"
@@ -9,7 +15,7 @@ IconManagerFont "fixed"
 
 Color
 {
-    BorderColor "gray85"
+    BorderColor "black"
     DefaultBackground "black"
     DefaultForeground "gray85"
     TitleBackground "black"
