@@ -6,12 +6,14 @@ BorderWidth 3
 NoHighlight
 IconifyByUnmapping
 RestartPreviousState
-DecorateTransients
 TitleFont "fixed"
 ResizeFont "fixed"
 MenuFont "fixed"
 IconFont "fixed"
 IconManagerFont "fixed"
+NoTitle {
+    "bar"
+}
 
 Color
 {
