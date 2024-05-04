@@ -1,0 +1,82 @@
+NoGrabServer
+NoBackingStore
+RandomPlacement
+FramePadding 0
+BorderWidth 3
+NoHighlight
+IconifyByUnmapping
+RestartPreviousState
+TitleFont "fixed"
+ResizeFont "fixed"
+MenuFont "fixed"
+IconFont "fixed"
+IconManagerFont "fixed"
+NoTitle
+ForceFocus
+
+Color
+{
+    BorderColor "black"
+    DefaultBackground "black"
+    DefaultForeground "gray85"
+    TitleBackground "black"
+    TitleForeground "gray85"
+    MenuBackground "black"
+    MenuForeground "gray85"
+    MenuBorderColor "gray85"
+    MenuTitleBackground "gray85"
+    MenuTitleForeground "black"
+    IconBackground "black"
+    IconForeground "gray85"
+    IconBorderColor "gray85"
+    IconManagerBackground "black"
+    IconManagerForeground "gray85"
+}
+
+MoveDelta 3
+
+Button1 = : root : f.menu "main"
+Button2 = : root : f.menu "windowops"
+Button1 = m : window|icon|title : f.move
+Button2 = : title : f.raiselower
+Button3 = : title : f.raiselower
+Button2 = : icon : f.iconify
+Button1 = : iconmgr : f.iconify
+Button2 = : iconmgr : f.iconify
+"Tab"   = m : all : f.circleup
+"Tab"   = m | s : all : f.circledown
+
+menu "main"
+{
+        "Main Menu"     f.title
+        "Launch"    f.exec  "rofi -show run &"
+        ""          f.nop
+        "Show Icon Manager" f.showiconmgr
+        "Hide Icon Manager" f.hideiconmgr
+        ""          f.nop
+        "Exit"          f.menu "Quit-Verify"
+}
+
+menu "Quit-Verify"
+{
+        "Really quit twm?"  f.title
+        "No, restart twm"   f.restart
+        "Yes, really quit"  f.quit
+}
+
+menu "windowops"
+{
+        "Window Ops"        f.title
+        ""          f.nop
+        "Iconify"       f.iconify
+        "Resize"        f.resize
+        "Move"          f.move
+        "Raise"         f.raise
+        "Lower"         f.lower
+        ""          f.nop
+        "Focus"         f.focus
+        "Unfocus"       f.unfocus
+        ""          f.nop
+        "Delete"        f.delete
+        "Destroy"       f.destroy
+}
