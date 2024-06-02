@@ -1,7 +1,7 @@
 borderwidth 5
 gap 5 35 5 5
 color inactiveborder "#eee8d5"
-color activeborder "#93a1a1"
+color activeborder "#32302f"
 bind-mouse M-3 window-raise
 bind-mouse 4-3 window-resize
 bind-mouse 4-2 window-resize
