@@ -12,7 +12,7 @@ config.tab_bar_at_bottom = true
 config.hide_tab_bar_if_only_one_tab = true
 config.default_cursor_style = "BlinkingBlock"
 config.font_size = 14
-config.line_height = 1.25
+config.line_height = 1
 config.window_background_opacity = 1
 
 return config
