@@ -1,0 +1,26 @@
+set arrow_cursor
+set editor="vim"
+set edit_headers
+set mbox_type="Maildir"
+set reply_to
+set reverse_name
+unset mark_old
+set tilde
+
+set pager_index_lines = 10
+set pager_context = 3
+set pager_stop
+set menu_scroll
+set tilde
+unset markers
+
+set real_name = "Aaron Brady"
+set from = "xeu@ve3x.eu"
+set use_envelope_from
+set use_from = "yes"
+set record = "+Sent"
+set trash = "+Trash"
+set postponed = "+Drafts"
+set mail_check = 6
+
+color status yellow red
