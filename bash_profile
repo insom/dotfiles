@@ -18,7 +18,7 @@ function branches() {
     git show --format='%C(auto)%D %s' -s $(git for-each-ref --sort=committerdate --format='%(refname:short)' refs/heads/ | grep -v '^\(master\|main\)$')
 }
 
-if [ -n "$(which nvim)" ]; then
+if which -s nvim; then
     export EDITOR=nvim
     export VISUAL=nvim
     alias vi=nvim
@@ -29,15 +29,15 @@ else
     alias vi=vim
 fi
 
-if [ -n "$(which bat)" ]; then
+if which -s bat; then
     alias cat=bat
 fi
 
-if [ -n "$(which batcat)" ]; then
+if which -s batcat; then
     alias cat=batcat
 fi
 
-if [ -n "$(which gls)" ]; then
+if which -s gls; then
     alias ls="gls -F --color=auto"
 else
     alias ls="ls -F --color=auto"
@@ -56,7 +56,7 @@ fi
 [ -f /opt/homebrew/bin/brew ] && eval "$(/opt/homebrew/bin/brew shellenv)"
 
 [ -d "$PYENV_ROOT/bin" ] && export PATH="$PYENV_ROOT/bin:$PATH"
-[ -n "$(which pyenv)" ] && eval "$(pyenv init -)"
+which -s pyenv && eval "$(pyenv init -)"
 
 [ -d "/usr/gnu/bin" ] && export PATH="/usr/gnu/bin:$PATH"
 [ -d "~/.local/bin" ] && export PATH="~/.local/bin:$PATH"
