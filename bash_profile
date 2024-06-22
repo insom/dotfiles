@@ -58,8 +58,8 @@ fi
 [ -d "$PYENV_ROOT/bin" ] && export PATH="$PYENV_ROOT/bin:$PATH"
 which -s pyenv && eval "$(pyenv init -)"
 
-[ -d "/usr/gnu/bin" ] && export PATH="/usr/gnu/bin:$PATH"
-[ -d "~/.local/bin" ] && export PATH="~/.local/bin:$PATH"
-[ -d "~/Bin" ] && export PATH="~/Bin:$PATH"
+[ -d /usr/gnu/bin ] && export PATH="/usr/gnu/bin:$PATH"
+[ -d ~/.local/bin ] && export PATH="~/.local/bin:$PATH"
+[ -d ~/Bin ] && export PATH="~/Bin:$PATH"
 
 [ -f ~/.lscolors ] && source ~/.lscolors
