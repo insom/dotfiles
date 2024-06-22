@@ -1,4 +1,5 @@
 ln -sf `pwd`/bash_profile ~/.bash_profile
+ln -sf `pwd`/lscolors ~/.lscolors
 ln -sf `pwd`/gitconfig ~/.gitconfig
 ln -sf `pwd`/tmux.conf ~/.tmux.conf
 # ln -sf `pwd`/vimrc ~/.vimrc
