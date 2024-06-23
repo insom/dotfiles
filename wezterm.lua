@@ -14,5 +14,6 @@ config.default_cursor_style = "BlinkingBlock"
 config.font_size = 14
 config.line_height = 1
 config.window_background_opacity = 1
+config.term = "wezterm"
 
 return config

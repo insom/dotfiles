@@ -52,7 +52,7 @@ fi
 [ -f ~/.vim/plugged/fzf/shell/key-bindings.bash ] && source ~/.vim/plugged/fzf/shell/key-bindings.bash
 [ -f ~/.vim/plugged/fzf/shell/completion.bash ] && source ~/.vim/plugged/fzf/shell/completion.bash
 
-[ -f ~/.cargo.env ] && source ~/.cargo.env
+[ -f ~/.cargo/env ] && source ~/.cargo/env
 [ -f /opt/homebrew/bin/brew ] && eval "$(/opt/homebrew/bin/brew shellenv)"
 
 [ -d "$PYENV_ROOT/bin" ] && export PATH="$PYENV_ROOT/bin:$PATH"
