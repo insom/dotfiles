@@ -4,7 +4,7 @@ export BASH_SILENCE_DEPRECATION_WARNING=1
 export HOMEBREW_NO_ENV_FILTERING=1
 export BAT_THEME=1337 BAT_STYLE=plain
 export CAPSH="$(hostname | cut -d. -f 1)"
-export PS1='\[\033[01;33m\]$CAPSH\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+export PS1='\[\033[01;33m\]$CAPSH\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\033[01;32m$(grp)\033[00m\$ '
 export PYENV_ROOT="$HOME/.pyenv"
 unset PROMPT_COMMAND
 
@@ -16,6 +16,12 @@ function gc() {
 };
 function branches() {
     git show --format='%C(auto)%D %s' -s $(git for-each-ref --sort=committerdate --format='%(refname:short)' refs/heads/ | grep -v '^\(master\|main\)$')
+}
+function grp() {
+    br=$(git rev-parse --abbrev-ref HEAD 2>/dev/null)
+    if [[ ! -z "$br" ]]; then
+        echo " [$br] "
+    fi
 }
 
 if which -s nvim; then
