@@ -14,7 +14,7 @@ config.default_cursor_style = "BlinkingBlock"
 config.font_size = 14
 config.line_height = 1
 config.window_background_opacity = 1
-config.term = "wezterm"
+config.term = "xterm-256color"
 config.selection_word_boundary = " \n\t{}[]()\"'`,;:"
 
 return config
