@@ -18,7 +18,8 @@
 [alias]
     lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
     please = push --force-with-lease
+    nm = branch --no-merged
 [include]
     path = /Users/aaron/.config/dev/gitconfig
 [init]
-	defaultBranch = main
+    defaultBranch = main
