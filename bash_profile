@@ -2,12 +2,12 @@
 
 export BASH_SILENCE_DEPRECATION_WARNING=1
 export HOMEBREW_NO_ENV_FILTERING=1
-export BAT_THEME=gruvbox-light BAT_STYLE=plain
+export BAT_THEME=gruvbox-dark BAT_STYLE=plain
 export CAPSH="$(hostname | sed 's/^\(....\).*/\1/' | tr a-z A-Z)"
 
-yellow="\001$(tput setaf 3)\002"
-blue="\001$(tput setaf 4)\002"
-green="\001$(tput setaf 2)\002"
+yellow="\001$(tput bold ; tput setaf 3)\002"
+blue="\001$(tput bold ; tput setaf 4)\002"
+green="\001$(tput bold ; tput setaf 2)\002"
 dim="\001$(tput dim)\002"
 reset="\001$(tput sgr0)\002"
 
@@ -76,3 +76,4 @@ which -s pyenv && eval "$(pyenv init -)"
 [ -d ~/Bin ] && export PATH="~/Bin:$PATH"
 
 [ -f ~/.lscolors ] && source ~/.lscolors
+[ -f ~/.localbash ] && source ~/.localbash
