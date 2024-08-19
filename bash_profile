@@ -2,14 +2,21 @@
 
 export BASH_SILENCE_DEPRECATION_WARNING=1
 export HOMEBREW_NO_ENV_FILTERING=1
-export BAT_THEME=1337 BAT_STYLE=plain
-export CAPSH="$(hostname | cut -d. -f 1)"
-export PS1='\[\033[01;33m\]$CAPSH\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\033[01;32m$(grp)\033[00m\$ '
+export BAT_THEME=gruvbox-light BAT_STYLE=plain
+export CAPSH="$(hostname | sed 's/^\(....\).*/\1/' | tr a-z A-Z)"
+
+yellow="\001$(tput setaf 3)\002"
+blue="\001$(tput setaf 4)\002"
+green="\001$(tput setaf 2)\002"
+dim="\001$(tput dim)\002"
+reset="\001$(tput sgr0)\002"
+
+export PS1="$yellow$CAPSH$reset:$blue\w$green\$(grp)$reset\$ "
 export PYENV_ROOT="$HOME/.pyenv"
 unset PROMPT_COMMAND
 
 function title() {
-    echo -ne "\033]0; $1\007";
+    echo -ne "\033]0;$1\007";
 }
 function gc() {
     git commit -m $(date +%s);
