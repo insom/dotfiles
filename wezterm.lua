@@ -6,6 +6,15 @@ config.font = wezterm.font_with_fallback {
     { family = 'JetBrains Mono', harfbuzz_features = { 'calt=0', 'clig=0', 'liga=0' }, },
     'Consolas',
 }
+config.font_rules = {
+  {
+    intensity = 'Bold',
+    italic = false,
+    font = wezterm.font_with_fallback {
+        { family = 'Jetbrains Mono', weight = 'ExtraBlack' },
+    },
+  },
+}
 
 config.use_fancy_tab_bar = false
 config.tab_bar_at_bottom = true
