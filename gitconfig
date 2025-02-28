@@ -1,6 +1,7 @@
 [user]
     email = aaron@insom.me.uk
     name = Aaron Brady
+    signingkey = /home/insom/.ssh/id_ed25519
 [push]
     default = simple
     autoSetupRemote = true
@@ -19,7 +20,31 @@
     lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
     please = push --force-with-lease
     nm = branch --no-merged
-[include]
-    path = /Users/aaron/.config/dev/gitconfig
 [init]
     defaultBranch = main
+[gpg]
+    format = ssh
+[column]
+    ui = auto
+[branch]
+    sort = -committerdate
+[tag]
+    sort = version:refname
+[diff]
+    algorithm = histogram
+    colorMoved = plain
+    mnemonicPrefix = true
+    renames = true
+[fetch]
+    prune = true
+    pruneTags = true
+    all = true
+[commit]
+    verbose = true
+[rerere]
+    enabled = true
+    autoupdate = true
+[rebase]
+    autoSquash = true
+    autoStash = true
+    updateRefs = true
