@@ -60,10 +60,13 @@ if [ -z "$SSH_AUTH_SOCK" ]; then
     export SSH_AUTH_SOCK=$(echo /tmp/ssh-*/agent.*)
 fi
 
-[ -d ~/.vim/plugged/fzf/bin ] && export PATH=~/.vim/plugged/fzf/bin:$PATH
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+[ -d ~/.vim/plugged/fzf/bin ] && export PATH=~/.vim/plugged/fzf/bin:$PATH
 [ -f ~/.vim/plugged/fzf/shell/key-bindings.bash ] && source ~/.vim/plugged/fzf/shell/key-bindings.bash
 [ -f ~/.vim/plugged/fzf/shell/completion.bash ] && source ~/.vim/plugged/fzf/shell/completion.bash
+[ -d ~/.local/share/nvim/plugged/fzf/bin ] && export PATH=~/.local/share/nvim/plugged/fzf/bin:$PATH
+[ -f ~/.local/share/nvim/plugged/fzf/shell/key-bindings.bash ] && source ~/.local/share/nvim/plugged/fzf/shell/key-bindings.bash
+[ -f ~/.local/share/nvim/plugged/fzf/shell/completion.bash ] && source ~/.local/share/nvim/plugged/fzf/shell/completion.bash
 
 [ -f ~/.cargo/env ] && source ~/.cargo/env
 [ -f /opt/homebrew/bin/brew ] && eval "$(/opt/homebrew/bin/brew shellenv)"
