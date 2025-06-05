@@ -11,7 +11,7 @@ config.font_rules = {
     intensity = 'Bold',
     italic = false,
     font = wezterm.font_with_fallback {
-        { family = 'Jetbrains Mono', weight = 'ExtraBlack' },
+        { family = 'Jetbrains Mono', weight = 'Bold', italic = false },
     },
   },
 }
@@ -20,7 +20,7 @@ config.use_fancy_tab_bar = false
 config.tab_bar_at_bottom = true
 config.hide_tab_bar_if_only_one_tab = true
 config.default_cursor_style = "BlinkingBlock"
-config.font_size = 14
+config.font_size = 10
 config.line_height = 1
 config.window_background_opacity = 1
 config.term = "xterm-256color"
@@ -46,5 +46,7 @@ config.keys = {
     },
   },
 }
+
+config.enable_wayland = false
 
 return config
