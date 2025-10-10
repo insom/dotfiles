@@ -2,6 +2,7 @@ local wezterm = require 'wezterm'
 local config = wezterm.config_builder()
 
 config.color_scheme = 'GruvboxDark'
+config.warn_about_missing_glyphs = false
 config.font = wezterm.font_with_fallback {
     { family = 'JetBrains Mono', harfbuzz_features = { 'calt=0', 'clig=0', 'liga=0' }, },
     'Consolas',
@@ -19,7 +20,7 @@ config.font_rules = {
 config.use_fancy_tab_bar = false
 config.tab_bar_at_bottom = true
 config.hide_tab_bar_if_only_one_tab = true
-config.default_cursor_style = "BlinkingBlock"
+-- config.default_cursor_style = "BlinkingBlock"
 config.font_size = 10
 config.line_height = 1
 config.window_background_opacity = 1
