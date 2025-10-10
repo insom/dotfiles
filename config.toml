@@ -1,0 +1,37 @@
+# theme = "kaolin-valley-dark"
+theme = "gruvbox"
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.file-picker]
+hidden = false
+
+[editor.soft-wrap]
+wrap-at-text-width = true
+enable = true
+
+[editor]
+default-yank-register = "+"
+
+[keys.normal]
+"#" = "toggle_comments"
+"^" = "goto_first_nonwhitespace"
+"$" = "goto_line_end"
+"C-a" = "goto_first_nonwhitespace"
+"C-e" = "goto_line_end"
+
+[keys.insert]
+"C-a" = "goto_first_nonwhitespace"
+"C-e" = "goto_line_end"
+
+[keys.select]
+"^" = "goto_first_nonwhitespace"
+"$" = "goto_line_end"
+"C-a" = "goto_first_nonwhitespace"
+"C-e" = "goto_line_end"
+
+[keys.normal.space]
+l = ":reflow"
