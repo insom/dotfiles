@@ -3,7 +3,9 @@ ln -sf `pwd`/lscolors ~/.lscolors
 ln -sf `pwd`/gitconfig ~/.gitconfig
 ln -sf `pwd`/tmux.conf ~/.tmux.conf
 # ln -sf `pwd`/vimrc ~/.vimrc
-mkdir -p ~/.config/nvim # split loyalties.
+mkdir -p ~/.config/nvim ~/.config/helix ~/.config/ghostty
 ln -sf `pwd`/vimrc ~/.config/nvim/init.vim
 ln -sf `pwd`/Xresources ~/.Xresources
 ln -sf `pwd`/wezterm.lua ~/.wezterm.lua
+ln -sf `pwd`/config.toml ~/.config/helix/config.toml
+ln -sf `pwd`/ghostty-config ~/.config/ghostty/config

@@ -42,6 +42,12 @@ else
     alias vi=vim
 fi
 
+# HX Immersion
+alias vi=hx
+alias vim=hx
+export EDITOR=hx
+export VISUAL=hx
+
 if which -s bat; then
     alias cat=bat
 fi

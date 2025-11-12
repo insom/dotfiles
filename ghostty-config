@@ -7,3 +7,7 @@ cursor-style = block
 term = xterm-256color
 theme = Gruvbox Dark
 shell-integration-features = no-cursor
+command = bash -l
+gtk-titlebar = false
+#gtk-toolbar-style = raised
+window-theme = ghostty
