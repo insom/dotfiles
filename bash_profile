@@ -11,7 +11,6 @@ green="\001$(tput bold ; tput setaf 2)\002"
 dim="\001$(tput dim)\002"
 reset="\001$(tput sgr0)\002"
 
-export PS1="$yellow$CAPSH$reset:$blue\w$green\$(grp)$reset\$ "
 export PYENV_ROOT="$HOME/.pyenv"
 unset PROMPT_COMMAND
 
@@ -30,33 +29,20 @@ function grp() {
         echo " [$br] "
     fi
 }
+export PS1="$yellow$CAPSH$reset:$blue\w${green}\$(grp)$reset\$ "
 
-if which -s nvim; then
-    export EDITOR=nvim
-    export VISUAL=nvim
-    alias vi=nvim
-    alias vim=nvim
-else
-    export EDITOR=nvim
-    export VISUAL=nvim
-    alias vi=vim
-fi
-
-# HX Immersion
-alias vi=hx
-alias vim=hx
 export EDITOR=hx
 export VISUAL=hx
 
-if which -s bat; then
+if [ "$(type -t bat)" == "file" ]; then
     alias cat=bat
 fi
 
-if which -s batcat; then
+if [ "$(type -t batcat)" == "file" ]; then
     alias cat=batcat
 fi
 
-if which -s gls; then
+if [ "$(type -t gls)" == "file" ]; then
     alias ls="gls -F --color=auto"
 else
     alias ls="ls -F --color=auto"
@@ -78,7 +64,9 @@ fi
 [ -f /opt/homebrew/bin/brew ] && eval "$(/opt/homebrew/bin/brew shellenv)"
 
 [ -d "$PYENV_ROOT/bin" ] && export PATH="$PYENV_ROOT/bin:$PATH"
-which -s pyenv && eval "$(pyenv init -)"
+if [ "$(type -t pyenv)" == "file" ]; then
+    eval "$(pyenv init -)"
+fi
 
 [ -d /usr/gnu/bin ] && export PATH="/usr/gnu/bin:$PATH"
 [ -d ~/.local/bin ] && export PATH="~/.local/bin:$PATH"
