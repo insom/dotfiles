@@ -1,15 +1,9 @@
 set $mod Mod4
-set $term wezterm
-set $term Bin/ghostty
+set $term ghostty
 set $menu wmenu-run
 
-output DP-1 {
-    bg /home/insom/Pictures/OKBG.jpg fill
-    scale 1.5
-}
-output DP-3 {
-    scale 2.0
-    #mode 1920x1080@60Hz
+output eDP-1 {
+    bg /home/insom/.OKBG.jpg fill
 }
 
 set $gnome-schema org.gnome.desktop.interface
@@ -128,8 +122,7 @@ bindsym $mod+Shift+g gaps inner all minus 10
 bindsym $mod+Control+g gaps outer all plus 10
 bindsym $mod+Control+Shift+g gaps outer all minus 10
 
-default_border pixel 2
+default_border pixel 4
 gaps inner 30
 
-exec "systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
 exec "dbus-update-activation-environment --all"
