@@ -1,5 +1,5 @@
 [user]
-    email = aaron@insom.me.uk
+    email = aaron@epworth.ca
     name = Aaron Brady
     signingkey = /home/insom/.ssh/id_ed25519
 [push]
