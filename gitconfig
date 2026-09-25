@@ -35,6 +35,7 @@
     colorMoved = plain
     mnemonicPrefix = true
     renames = true
+    external = difft
 [fetch]
     prune = true
     pruneTags = true
