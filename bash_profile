@@ -11,7 +11,6 @@ green="\001$(tput bold ; tput setaf 2)\002"
 dim="\001$(tput dim)\002"
 reset="\001$(tput sgr0)\002"
 
-export PYENV_ROOT="$HOME/.pyenv"
 unset PROMPT_COMMAND
 
 function title() {
@@ -31,8 +30,12 @@ function grp() {
 }
 export PS1="$yellow$CAPSH$reset:$blue\w${green}\$(grp)$reset\$ "
 
-export EDITOR=hx
-export VISUAL=hx
+if [ "$(type -t hx)" == "file" ]; then
+    export EDITOR=hx
+    export VISUAL=hx
+    alias vi=hx
+    alias vim=hx
+fi
 
 if [ "$(type -t bat)" == "file" ]; then
     alias cat=bat
@@ -42,6 +45,15 @@ if [ "$(type -t batcat)" == "file" ]; then
     alias cat=batcat
 fi
 
+if [ "$(type -t doas)" == "file" ]; then
+    # musl memory
+    alias sudo=doas
+fi
+
+if [ "$(type -t zoxide)" == "file" ]; then
+    eval "$(zoxide init bash)" || true
+fi
+
 if [ "$(type -t gls)" == "file" ]; then
     alias ls="gls -F --color=auto"
 else
@@ -49,31 +61,14 @@ else
 fi
 
 if [ -z "$SSH_AUTH_SOCK" ]; then
-    export SSH_AUTH_SOCK=$(echo /tmp/ssh-*/agent.*)
+    export SSH_AUTH_SOCK=$(echo ~/.ssh/agent/*.agent.*)
 fi
 
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
-[ -d ~/.vim/plugged/fzf/bin ] && export PATH=~/.vim/plugged/fzf/bin:$PATH
-[ -f ~/.vim/plugged/fzf/shell/key-bindings.bash ] && source ~/.vim/plugged/fzf/shell/key-bindings.bash
-[ -f ~/.vim/plugged/fzf/shell/completion.bash ] && source ~/.vim/plugged/fzf/shell/completion.bash
-[ -d ~/.local/share/nvim/plugged/fzf/bin ] && export PATH=~/.local/share/nvim/plugged/fzf/bin:$PATH
-[ -f ~/.local/share/nvim/plugged/fzf/shell/key-bindings.bash ] && source ~/.local/share/nvim/plugged/fzf/shell/key-bindings.bash
-[ -f ~/.local/share/nvim/plugged/fzf/shell/completion.bash ] && source ~/.local/share/nvim/plugged/fzf/shell/completion.bash
-
-[ -f ~/.cargo/env ] && source ~/.cargo/env
 [ -f /opt/homebrew/bin/brew ] && eval "$(/opt/homebrew/bin/brew shellenv)"
-
-[ -d "$PYENV_ROOT/bin" ] && export PATH="$PYENV_ROOT/bin:$PATH"
-if [ "$(type -t pyenv)" == "file" ]; then
-    eval "$(pyenv init -)"
-fi
-
+[ -f /usr/share/bash/plugins/fzf/fzf.plugin.sh ] && source /usr/share/bash/plugins/fzf/fzf.plugin.sh
 [ -d /usr/gnu/bin ] && export PATH="/usr/gnu/bin:$PATH"
+[ -f ~/.cargo/env ] && source ~/.cargo/env
 [ -d ~/.local/bin ] && export PATH="~/.local/bin:$PATH"
 [ -d ~/Bin ] && export PATH="~/Bin:$PATH"
-
 [ -f ~/.lscolors ] && source ~/.lscolors
 [ -f ~/.localbash ] && source ~/.localbash
-
-# uv
-export PATH="/home/insom/.local/bin:$PATH"
