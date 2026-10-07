@@ -6,6 +6,8 @@ spawn-at-startup "swayidle" "-w" \
 
 spawn-at-startup "/usr/libexec/pipewire-launcher"
 
+spawn-at-startup "swaybg -m fill -i ~/Downloads/ConcreteSun.jpg"
+
 // This config is in the KDL format: https://kdl.dev
 // "/-" comments out the following node.
 // Check the wiki for a full description of the configuration:

@@ -74,3 +74,6 @@ fi
 
 [ -f ~/.lscolors ] && source ~/.lscolors
 [ -f ~/.localbash ] && source ~/.localbash
+
+# uv
+export PATH="/home/insom/.local/bin:$PATH"

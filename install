@@ -2,10 +2,6 @@ ln -sf `pwd`/bash_profile ~/.bash_profile
 ln -sf `pwd`/lscolors ~/.lscolors
 ln -sf `pwd`/gitconfig ~/.gitconfig
 ln -sf `pwd`/tmux.conf ~/.tmux.conf
-# ln -sf `pwd`/vimrc ~/.vimrc
-mkdir -p ~/.config/nvim ~/.config/helix ~/.config/ghostty
-ln -sf `pwd`/vimrc ~/.config/nvim/init.vim
-ln -sf `pwd`/Xresources ~/.Xresources
-ln -sf `pwd`/wezterm.lua ~/.wezterm.lua
+mkdir -p ~/.config/niri ~/.config/helix
 ln -sf `pwd`/config.toml ~/.config/helix/config.toml
-ln -sf `pwd`/ghostty-config ~/.config/ghostty/config
+ln -sf `pwd`/config.kdl ~/.config/niri/config.kdl
