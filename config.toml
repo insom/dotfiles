@@ -1,5 +1,5 @@
-# theme = "kaolin-valley-dark"
-theme = "gruvbox_dark_hard"
+# theme = "zed_onedark"
+theme = "autumn_night"
 
 [editor.cursor-shape]
 insert = "bar"
